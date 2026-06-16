@@ -1,0 +1,17 @@
+# Google News RSS Search Configuration
+search:
+  query: "AI STEM Education"
+  limit: 10
+
+# Gemini API Configuration
+gemini:
+  model_name: "gemini-2.5-flash"
+
+# Discord Webhook Configuration
+discord:
+  webhook_url: "your_discord_webhook_url_here"  # Supports config or env override
+  username: "STEM News Bot"
+
+# Scheduler Configuration
+schedule:
+  time: "08:00"  # Beijing time (UTC+8) for daily run
