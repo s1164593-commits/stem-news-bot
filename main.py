@@ -145,12 +145,12 @@ def send_to_discord(webhook_url, content):
     # Discord messages are limited to 2000 characters
     if len(content) > 2000:
         logger.warning("Content exceeds 2000 characters. Truncating for Discord message limits...")
-        content = content[:1990] + "\n...(truncated)"
+        content = content[:1980] + "\n...(truncated)"
         
     payload = {
         "content": content
     }
-    
+    logger.info(f"Discord content length: {len(content)}")
     logger.info("Sending brief to Discord Webhook...")
     try:
         response = requests.post(webhook_url, json=payload)
